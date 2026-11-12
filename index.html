@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sovereign Launcher</title>
+    <meta
+      name="description"
+      content="Téléchargez le launcher Sovereign et rejoignez l’expérience de jeu." 
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <img class="brand-logo" src="Emblème futuriste en S violet néon.png" alt="Logo Sovereign icon" />
+          <span>Sovereign</span>
+        </div>
+        <nav class="nav">
+          <a href="#accueil">Accueil</a>
+          <a href="#telechargement">Téléchargement</a>
+          <a href="#news">News</a>
+        </nav>
+      </header>
+
+      <main class="hero" id="accueil">
+        <div class="hero-copy">
+          <p class="eyebrow">Sovereign</p>
+          <h1>Le launcher officiel.</h1>
+          <p class="subtitle">
+            Accède à ton jeu, vérifie tes mises à jour et lance ta session en un seul clic.
+          </p>
+
+          <div class="cta-row">
+            <a class="primary-btn" id="downloadButton" href="https://github.com/lucavzqzf/sovereign-launcher/releases/latest/download/SovereignLauncher-Setup.exe" download>
+              Télécharger le launcher
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-scene" aria-label="Image du launcher">
+          <a class="photo-download-link" href="https://github.com/lucavzqzf/sovereign-launcher/releases/latest/download/SovereignLauncher-Setup.exe" download aria-label="Télécharger le launcher Sovereign">
+            <img class="launcher-photo" src="IMG_2629.jpeg" alt="Sovereign Launcher" />
+          </a>
+        </div>
+      </main>
+
+      <section class="download-panel" id="telechargement">
+        <div class="panel-copy">
+          <p class="eyebrow alt">Téléchargement</p>
+          <h2>Installe le launcher Sovereign sur Windows.</h2>
+          <p class="download-note">Un seul fichier, installation rapide, accès direct au jeu.</p>
+        </div>
+        <a class="primary-btn large" id="downloadButtonSecondary" href="https://github.com/lucavzqzf/sovereign-launcher/releases/latest/download/SovereignLauncher-Setup.exe" download>
+          Télécharger
+        </a>
+      </section>
+    </div>
+
+    <div class="toast" id="toast">Téléchargement démarré.</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
