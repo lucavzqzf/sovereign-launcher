@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#08070b"><title>Forum — Sovereign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="forum.css"></head>
+<body class="forum-page">
+  <header class="topbar"><a class="brand" href="index.html"><img src="sovereign-logo.png" alt="Sovereign"></a><nav><a href="index.html">Accueil</a><a class="nav-current" href="forum.html">Forum &amp; idées</a></nav></header>
+  <main class="forum-shell">
+    <section class="forum-intro"><div class="mini-logo"><img src="sovereign-emblem.svg" alt=""><span>FAÇONNONS LE JEU ENSEMBLE</span></div><h1>VOS IDÉES.<br><span>NOTRE AVENIR.</span></h1><p>Signalez un bug, proposez une idée ou discutez du jeu. Tout le monde peut lire et répondre.</p><a href="index.html">← Retour à l’accueil</a></section>
+    <section class="forum-panel">
+      <div id="listView">
+        <div class="panel-head"><div><h2>Le forum</h2><p>Bugs, idées et discussions de la communauté.</p></div><button class="pbtn" id="newBtn" type="button">NOUVEAU SUJET</button></div>
+        <form class="suggestion-form" id="newForm" hidden>
+          <label>Votre pseudo<input id="fAuthor" maxlength="20" placeholder="Comment vous appeler ?" required></label>
+          <label>Type<select id="fCategory"><option value="suggestion">Idée / suggestion</option><option value="bug">Bug</option><option value="autre">Autre</option></select></label>
+          <label class="wide">Titre<input id="fTitle" maxlength="100" placeholder="Résumez en une phrase" required></label>
+          <label class="wide">Description<textarea id="fBody" maxlength="2000" placeholder="Décrivez votre idée ou le problème…" required></textarea></label>
+          <div class="wide actions"><button class="pbtn" type="submit">PUBLIER ↗</button><button class="ghost" type="button" id="cancelBtn">ANNULER</button><span class="form-message" id="newMsg" role="status" aria-live="polite"></span></div>
+        </form>
+        <div class="filters" id="filters"><button data-f="all" class="on" type="button">TOUT</button><button data-f="bug" type="button">BUGS</button><button data-f="suggestion" type="button">IDÉES</button><button data-f="autre" type="button">AUTRE</button></div>
+        <div class="suggestion-list" id="list"><p class="empty-state">Chargement…</p></div>
+      </div>
+      <div id="postView" hidden>
+        <button class="ghost" id="backBtn" type="button">← RETOUR AU FORUM</button>
+        <article class="suggestion-item big" id="postBox"></article>
+        <h3 class="sub">Réponses</h3>
+        <div class="suggestion-list" id="replies"></div>
+        <form class="suggestion-form" id="replyForm">
+          <label class="wide">Votre pseudo<input id="rAuthor" maxlength="20" placeholder="Comment vous appeler ?" required></label>
+          <label class="wide">Votre réponse<textarea id="rBody" maxlength="1000" required></textarea></label>
+          <div class="wide actions"><button class="pbtn" type="submit">RÉPONDRE ↗</button><span class="form-message" id="replyMsg" role="status" aria-live="polite"></span></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="forum-footer"><span>© <span class="year"></span> SOVEREIGN</span><span>UNIVERS EN CONSTRUCTION</span><a href="index.html">ACCUEIL ↗</a></footer>
+  <script src="content.js"></script><script src="forum.js"></script>
+</body>
+</html>
